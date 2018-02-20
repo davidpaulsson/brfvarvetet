@@ -1,0 +1,92 @@
+@import "./no-class/no-class";
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.header {
+  padding-bottom: 0;
+  @media (max-width: 40em) {
+    li {
+      text-align: left;
+      &:last-child {
+        border-bottom: 0;
+      }
+      a {
+        padding-left: 0;
+      }
+    }
+  }
+  &__nav {
+    @media (min-width: 40em) {
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+section {
+  h1 {
+    @include font-size($noclass-heading-size-2);
+  }
+}
+
+@media (min-width: 40em) {
+  .foreningen,
+  .boparm,
+  .kontakt,
+  .styrelsen {
+    display: flex;
+    &__title {
+      flex: 1;
+    }
+    &__content {
+      padding-top: 1em;
+      flex: 2;
+    }
+    margin-bottom: 2em;
+  }
+}
+
+.presentation_image {
+  margin-top: 1em;
+  @media (min-width: 40em) {
+    margin: 3em 0 2em;
+    max-width: 66%;
+  }
+}
+
+.board {
+  list-style-type: none;
+  padding-left: 0;
+  li {
+    margin-bottom: 2em;
+    @media (min-width: 40em) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  &__name {
+    @include font-size($noclass-heading-size-4);
+  }
+  &__name,
+  &__role,
+  &__email {
+    display: block;
+  }
+  &__email {
+    @media (min-width: 40em) {
+      flex: 1;
+      text-align: right;
+    }
+  }
+}

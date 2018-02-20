@@ -1,0 +1,13 @@
+{
+  "name": "brf-varvetet",
+  "version": "",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "rm -rf dist/ && parcel build index.html --public-url ./",
+    "deploy": "yarn run build && surge dist brfvarvetet.surge.sh"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "surge": "^0.19.0"
+  }
+}
