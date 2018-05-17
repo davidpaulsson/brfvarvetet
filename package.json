@@ -4,7 +4,7 @@
   "scripts": {
     "start": "parcel index.html",
     "build": "rm -rf dist/ && parcel build index.html --public-url ./ && cp CNAME dist",
-    "deploy": "push-dir --dir=dist --branch=gh-pages"
+    "deploy": "yarn run build && push-dir --dir=dist --branch=gh-pages"
   },
   "dependencies": {},
   "devDependencies": {
