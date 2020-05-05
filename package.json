@@ -3,13 +3,12 @@
   "version": "",
   "scripts": {
     "start": "parcel index.html",
-    "build":
-      "rm -rf dist/ && parcel build index.html --public-url ./ && cp CNAME dist",
-    "deploy":
-      "push-dir --dir=dist --branch=gh-pages --cleanup --force --verbose"
+    "build": "rm -rf dist/ && parcel build index.html --public-url ./ && cp CNAME dist",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup --force --verbose"
   },
   "dependencies": {},
   "devDependencies": {
+    "parcel": "^1.12.4",
     "push-dir": "^0.4.1"
   }
 }
