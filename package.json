@@ -10,6 +10,6 @@
   "devDependencies": {
     "parcel": "^1.12.4",
     "push-dir": "^0.4.1",
-    "sass": "^1.26.10"
+    "sass": "^1.37.2"
   }
 }
